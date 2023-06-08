@@ -1,0 +1,144 @@
+/********* keyframe for openbar ************ */
+@keyframes myframe {
+    0% {
+        transform: scale(.4);
+    }
+    30% {
+        transform: scale(.9);
+    }
+    50% {
+        font-size: 1.2rem;
+        transform: scale(1.2);
+    }
+    80% {
+        transform: scale(.9);
+    }
+    100% {
+        transform: scale(.4);
+    }
+    
+}* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/********* sidebar section ************ */
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    padding: .9rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, .09);
+    background-color: #fff;
+    position: relative;
+    transition: .3s linear;
+    transform: translateX(-100%);
+}
+.show-sidebar {
+    transform: translateX(0%);
+}
+.sidebar .sidebar-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sidebar .sidebar-header h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.sidebar .sidebar-header h3 span {
+    color: aquamarine;
+}
+.sidebar .sidebar-header button {
+    border: none;
+    outline: none;
+    background-color: #fff;
+} 
+.sidebar .sidebar-header button i {
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: red;
+    transition: .3s linear ;
+}
+.sidebar .sidebar-header button i:hover {
+    transform: rotate(400deg);
+    transition: .3s;
+}
+
+/********* sidebar link section ************ */
+.sidebar .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: absolute;
+    top: 60px;
+}
+.sidebar .links a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/********* sidebar social link section ************ */
+.sidebar .social-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.sidebar .social-links i {
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/********* openbar btn section ************ */
+.nav-openbar-toggle {
+    position: absolute;
+    top: 17px;
+    right: 50px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+.nav-openbar-toggle i {
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: aquamarine;
+    transition: .3s ;
+    animation: myframe 2s ease-in-out 2s infinite;
+}
+
+
+/********* media quaries section ************ */
+@media (max-width: 450px) {
+    .sidebar {
+        width: 100%;
+        transition: .3s linear;
+    }
+    .nav-openbar-toggle {
+        right: 30px;
+    }
+}
